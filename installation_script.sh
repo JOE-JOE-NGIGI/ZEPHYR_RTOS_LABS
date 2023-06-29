@@ -19,6 +19,8 @@ sudo apt install --no-install-recommends git cmake ninja-build gperf \
   make gcc gcc-multilib g++-multilib libsdl2-dev libmagic1
   
 #verify the versions of the main dependencies installed 
+echo "\n"
+echo "Verifying dependency versions"
 cmake --version
 python3 --version
 dtc --version
