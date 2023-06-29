@@ -1,8 +1,12 @@
 #!/bin/sh
-if [[ -f "kitware-archive.sh"]]
-then
-    echo "file exists on your filesystem."
+#!/bin/bash
+
+file="kitware-archive.sh"
+
+if [ -f "$PWD/$file" ]; then
+    echo "File $file exists on your filesystem. Skipping download."
 else
+    echo "File $file does not exist. Downloading..."
     wget https://apt.kitware.com/kitware-archive.sh
 fi
 
